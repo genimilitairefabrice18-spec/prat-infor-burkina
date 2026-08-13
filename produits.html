@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Produits - PRAT INFOR BURKINA</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+        <!-- Bouton Menu Mobile (À GAUCHE) -->
+        <button class="menu-btn" id="menuBtn" onclick="toggleMenu()" aria-label="Ouvrir le menu">
+            ☰
+        </button>
+
+        <!-- Logo -->
+        <div class="logo">
+            <h2>PRAT <span>INFOR</span> BURKINA</h2>
+        </div>
+
+        <!-- Menu de Navigation -->
+        <ul class="menu" id="navMenu">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="produits.html">Produits</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="apropos.html">À propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <!-- Bouton Contact (Affiché à droite sur PC) -->
+        <a href="contact.html" class="btn-contact">Nous contacter</a>
+    </nav>
+</header>
+
+<section class="page-title">
+    <h1>Nos Produits</h1>
+    <p>Découvrez notre catalogue informatique.</p>
+</section>
+
+<section class="recherche">
+    <!-- Champ de recherche par texte -->
+    <input type="text" id="search" placeholder="Rechercher un produit...">
+
+    <!-- Filtres : Catégorie ➜ Marque ➜ Modèle -->
+    <div class="filter-container">
+        <select id="categorySelect">
+            <option value="all">Toutes les catégories</option>
+            <option value="imprimantes">Imprimantes</option>
+            <option value="ordinateurs">Ordinateurs</option>
+            <option value="cartouches">Cartouches</option>
+            <option value="accessoires">Accessoires & Divers</option>
+        </select>
+
+        <select id="brandSelect">
+            <option value="all">Toutes les marques</option>
+        </select>
+
+        <select id="modelSelect">
+            <option value="all">Tous les modèles</option>
+        </select>
+
+        <!-- Filtre par couleur -->
+        <select id="colorSelect">
+            <option value="all">Toutes les couleurs</option>
+            <option value="noir">Noir</option>
+            <option value="cyan">Cyan</option>
+            <option value="magenta">Magenta</option>
+            <option value="jaune">Jaune</option>
+        </select>
+    </div>
+</section>
+
+<section class="produits-grid">
+
+    <!-- Cartouche ACO 44A -->
+    <div class="product-card" data-name="Cartouche ACO 44A" data-category="cartouches" data-brand="ACO" data-model="44A" data-color="magenta">
+        <img src="images/aco.jpeg" alt="Cartouche ACO 44A">
+        <h3>Cartouche ACO 44A</h3>
+        <ul class="caracteristiques">
+            <li><strong>Type :</strong> Cartouche de toner compatible</li>
+            <li><strong>Couleur :</strong> Magenta</li>
+            <li><strong>Rendement :</strong> env. 1 000 pages</li>
+            <li><strong>Compatibilité :</strong> HP LaserJet Pro M15 / M28</li>
+        </ul>
+    </div>
+
+    <!-- Rouleau thermique -->
+    <div class="product-card" data-name="rouleau " data-category="accessoires" data-brand="thermique" data-model="R&K">
+        <img src="images/rouleau.jpg" alt="rouleaux">
+        <h3>Rouleau thermique R&K</h3>
+        <ul class="caracteristiques">
+            <li><strong>Dimensions :</strong> 80 x 80 mm</li>
+            <li><strong>Type :</strong> Papier thermique haute sensibilité</li>
+            <li><strong>Usage :</strong> Caisses enregistreuses, imprimantes reçus</li>
+            <li><strong>Conditionnement :</strong> À l'unité ou en paquet</li>
+        </ul>
+    </div>
+
+    <!-- Cartouche HP 305 -->
+    <div class="product-card" data-name="cartouche hp 305" data-category="cartouches" data-brand="HP" data-model="305">
+        <img src="images/cartouche.jpg" alt="Cartouche">
+        <h3>Cartouche HP 305</h3>
+        <ul class="caracteristiques">
+            <li><strong>Marque :</strong> HP d'origine</li>
+            <li><strong>Type :</strong> Cartouche d'encre</li>
+            <li><strong>Rendement :</strong> env. 120 pages</li>
+            <li><strong>Compatibilité :</strong> HP DeskJet 2700 / 4100</li>
+        </ul>
+    </div>
+
+    <!-- HP All-in-one -->
+    <div class="product-card" data-name="HP All-in-one" data-category="ordinateurs" data-brand="HP" data-model="All-in-one">
+        <img src="images/all.jpeg" alt="Ordinateur">
+        <h3>HP All-in-one</h3>
+        <ul class="caracteristiques">
+            <li><strong>Écran :</strong> 23.8" Full HD Borderless</li>
+            <li><strong>Processeur :</strong> Intel Core i5 / i7</li>
+            <li><strong>Mémoire :</strong> 8 Go RAM / 512 Go SSD</li>
+            <li><strong>Système :</strong> Windows 11 Professionnel</li>
+        </ul>
+    </div>
+
+    <!-- Cartouche Blue bell -->
+    <div class="product-card" data-name="Cartouche Blue Bell 222A" data-category="cartouches" data-brand="Blue Bell" data-model="222A">
+        <img src="images/blue.jpeg" alt="Cartouche">
+        <h3>Cartouche Blue Bell 222A</h3>
+        <ul class="caracteristiques">
+            <li><strong>Modèle :</strong> 222A</li>
+            <li><strong>Type :</strong> Toner premium haute qualité</li>
+            <li><strong>Impression :</strong> Texte net et séchage rapide</li>
+            <li><strong>Rendement :</strong> Haute capacité</li>
+        </ul>
+    </div>
+
+    <!-- Cartouche C-EXV -->
+    <div class="product-card" data-name="Cartouche C-EXV" data-category="cartouches" data-brand="C-EXV" data-model="28">
+        <img src="images/c-exv.jpeg" alt="Cartouche">
+        <h3>Cartouche C-EXV 28</h3>
+        <ul class="caracteristiques">
+            <li><strong>Modèle :</strong> C-EXV 28</li>
+            <li><strong>Usage :</strong> Photocopieurs & Imprimantes pro</li>
+            <li><strong>Performance :</strong> Rendement élevé pour entreprise</li>
+            <li><strong>Couleur :</strong> Noir intense</li>
+        </ul>
+    </div>
+
+    <!-- Cable réseau -->
+    <div class="product-card" data-name="cable reseau" data-category="accessoires" data-brand="cable" data-model="rj45">
+        <img src="images/cable.jpeg" alt="cable reseau">
+        <h3>Câble Réseau RJ45</h3>
+        <ul class="caracteristiques">
+            <li><strong>Connectique :</strong> RJ45 Catégorie 6</li>
+            <li><strong>Vitesse :</strong> Jusqu'à 1 Gbps / 10 Gbps</li>
+            <li><strong>Blindage :</strong> F/UTP / FTP</li>
+            <li><strong>Usage :</strong> Réseaux locaux, routeurs, PC</li>
+        </ul>
+    </div>
+
+    <!-- Caméra surveillance-->
+    <div class="product-card" data-name="Camera 305" data-category="accessoires" data-brand="Camera" data-model="305">
+        <img src="images/cam.jpg" alt="Camera">
+        <h3>Caméra de Surveillance 305</h3>
+        <ul class="caracteristiques">
+            <li><strong>Résolution :</strong> Full HD 1080p</li>
+            <li><strong>Vision nocturne :</strong> Infrarouge jusqu'à 20m</li>
+            <li><strong>Connectivité :</strong> Wi-Fi / Câble RJ45</li>
+            <li><strong>Usage :</strong> Intérieur / Extérieur résistant aux intempéries</li>
+        </ul>
+    </div>
+
+    <!-- Imprimante-->
+    <div class="product-card" data-name="Imprimante HP JetPro" data-category="imprimantes" data-brand="HP" data-model="JetPro">
+        <img src="images/imprimante.jpg" alt="Imprimante">
+        <h3>Imprimante HP JetPro</h3>
+        <ul class="caracteristiques">
+            <li><strong>Fonctions :</strong> Impression, Copie, Numérisation</li>
+            <li><strong>Technologie :</strong> Jet d'encre / Laser rapide</li>
+            <li><strong>Connexion :</strong> Wi-Fi, USB, Ethernet, Mobile</li>
+            <li><strong>Vitesse :</strong> Jusqu'à 22 ppm</li>
+        </ul>
+    </div>
+
+    <!-- Onduleurs-->
+    <div class="product-card" data-name="onduleur" data-category="accessoires" data-brand="onduleur premax" data-model="UPS1500">
+        <img src="images/onduleur.jpeg" alt="onduleur">
+        <h3>Onduleur Premax UPS1500</h3>
+        <ul class="caracteristiques">
+            <li><strong>Capacité :</strong> 1500 VA / 900W</li>
+            <li><strong>Prises :</strong> Prises de sortie secourues</li>
+            <li><strong>Protection :</strong> Surtension, court-circuit, sous-tension</li>
+            <li><strong>Autonomie :</strong> Idéal pour PC et serveurs locaux</li>
+        </ul>
+    </div>
+
+</section>
+
+<button id="topBtn">↑</button>
+
+<!-- Bouton Flottant WhatsApp -->
+<a href="https://wa.me/22676747511?text=Bonjour%20PRAT%20INFOR%20BURKINA,%20j'aimerais%20avoir%20plus%20d'informations." 
+   class="whatsapp-float" 
+   target="_blank" 
+   aria-label="Contactez-nous sur WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<!-- Pied de page -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <img src="images/logo.png" alt="Logo PRAT INFOR" class="footer-logo">
+      <p class="brand-desc">Services et maintenance informatique de haute qualité.</p>
+    </div>
+
+    <div class="footer-contact">
+      <h4>Contact</h4>
+      <ul>
+        <li>
+          <i class="fa-solid fa-globe"></i>
+          <a href="https://prat-infor-burkina.netlify.app/" target="_blank">prat-infor-burkina.netlify.app</a>
+        </li>
+        <li>
+          <i class="fa-solid fa-phone"></i>
+          <span>+226 76 74 75 11 / 70 08 74 97</span>
+        </li>
+        <li>
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Bobo-Dioulasso, Sikassosira</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2026 PRAT INFOR BURKINA. Tous droits réservés.</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
